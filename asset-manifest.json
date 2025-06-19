@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/weebot/static/css/main.d61e413c.css",
+    "main.js": "/weebot/static/js/main.64aabca1.js",
+    "static/js/453.88dd6ec6.chunk.js": "/weebot/static/js/453.88dd6ec6.chunk.js",
+    "index.html": "/weebot/index.html",
+    "main.d61e413c.css.map": "/weebot/static/css/main.d61e413c.css.map",
+    "main.64aabca1.js.map": "/weebot/static/js/main.64aabca1.js.map",
+    "453.88dd6ec6.chunk.js.map": "/weebot/static/js/453.88dd6ec6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d61e413c.css",
+    "static/js/main.64aabca1.js"
+  ]
+}
