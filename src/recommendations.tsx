@@ -36,7 +36,7 @@ const RecommendationUI: React.FC = () => {
     setHasSearched(true);
 
     try {
-      const response = await fetch('http://localhost:8000/recommendations', {
+      const response = await fetch('http://149.129.218.226:8000/recommendations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ const RecommendationUI: React.FC = () => {
                 <span className='info-tag'>{item.format}</span>
                 <span className='info-tag'>Score: {item.averageScore}</span>
                 <span className='info-tag'>Popularity: {item.popularity}</span>
-                <a href={`https://anilist.co/anime/${item.idMal}`} target="_blank" rel="noopener noreferrer" className='info-anilist'><img src={anilist} alt='anilist'/></a>
+                <a href={`https://anilist.co/anime/${item.id}`} target="_blank" rel="noopener noreferrer" className='info-anilist'><img src={anilist} alt='anilist'/></a>
                 <a href={`https://myanimelist.net/anime/${item.idMal}`} target="_blank" rel="noopener noreferrer" className='info-mal'><img src={mal} alt='mal'/></a>
               </div>
               <div className='desc-genres'>
