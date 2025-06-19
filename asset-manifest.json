@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/weebot-react/static/css/main.d61e413c.css",
-    "main.js": "/weebot-react/static/js/main.700e8e3b.js",
-    "static/js/453.88dd6ec6.chunk.js": "/weebot-react/static/js/453.88dd6ec6.chunk.js",
-    "index.html": "/weebot-react/index.html",
-    "main.d61e413c.css.map": "/weebot-react/static/css/main.d61e413c.css.map",
-    "main.700e8e3b.js.map": "/weebot-react/static/js/main.700e8e3b.js.map",
-    "453.88dd6ec6.chunk.js.map": "/weebot-react/static/js/453.88dd6ec6.chunk.js.map"
+    "main.css": "./static/css/main.d61e413c.css",
+    "main.js": "./static/js/main.dc4419ec.js",
+    "static/js/453.88dd6ec6.chunk.js": "./static/js/453.88dd6ec6.chunk.js",
+    "index.html": "./index.html",
+    "main.d61e413c.css.map": "./static/css/main.d61e413c.css.map",
+    "main.dc4419ec.js.map": "./static/js/main.dc4419ec.js.map",
+    "453.88dd6ec6.chunk.js.map": "./static/js/453.88dd6ec6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d61e413c.css",
-    "static/js/main.700e8e3b.js"
+    "static/js/main.dc4419ec.js"
   ]
 }
