@@ -69,7 +69,7 @@ const RecommendationUI: React.FC = () => {
       { !hasSearched && (
         <div className="app-container">
           <h1 className="app-title">WeeBot</h1>
-          <p className="app-tagline">Recommend anime based on input with vector DB</p>
+          <p className="app-tagline">Recommend anime based on input with vector DB. Dataset: Anilist 2025</p>
         </div>
       )}
       <input 
