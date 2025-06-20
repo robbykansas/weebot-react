@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Recommendations.css';
-import mal from './assets/mal-logo.png'
+import { MalLogo, AnilistLogo} from './assets/logo'
 import anilist from './assets/anilist-logo.png'
 
 interface RecommendationResponse {
@@ -77,7 +77,7 @@ const RecommendationUI: React.FC = () => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="example: 'Recommends me anime about sports'"
+        placeholder="Search or ask in any language (e.g. 'anime sports from 2020')"
         className='recommendations-text'
         disabled={loading}
       />
@@ -97,7 +97,7 @@ const RecommendationUI: React.FC = () => {
                 <span className='info-tag'>Score: {item.averageScore}</span>
                 <span className='info-tag'>Popularity: {item.popularity}</span>
                 <a href={`https://anilist.co/anime/${item.id}`} target="_blank" rel="noopener noreferrer" className='info-anilist'><img src={anilist} alt='anilist'/></a>
-                <a href={`https://myanimelist.net/anime/${item.idMal}`} target="_blank" rel="noopener noreferrer" className='info-mal'><img src={mal} alt='mal'/></a>
+                <a href={`https://myanimelist.net/anime/${item.idMal}`} target="_blank" rel="noopener noreferrer" className='info-mal'><MalLogo /></a>
               </div>
               <div className='desc-genres'>
                 {item?.genres?.map(genre => (
