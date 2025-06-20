@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/weebot-react/static/css/main.a2940b2b.css",
+    "main.css": "/weebot-react/static/css/main.9f8112bd.css",
     "main.js": "/weebot-react/static/js/main.bb63c8ab.js",
     "static/js/453.88dd6ec6.chunk.js": "/weebot-react/static/js/453.88dd6ec6.chunk.js",
     "index.html": "/weebot-react/index.html",
-    "main.a2940b2b.css.map": "/weebot-react/static/css/main.a2940b2b.css.map",
+    "main.9f8112bd.css.map": "/weebot-react/static/css/main.9f8112bd.css.map",
     "main.bb63c8ab.js.map": "/weebot-react/static/js/main.bb63c8ab.js.map",
     "453.88dd6ec6.chunk.js.map": "/weebot-react/static/js/453.88dd6ec6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2940b2b.css",
+    "static/css/main.9f8112bd.css",
     "static/js/main.bb63c8ab.js"
   ]
 }
