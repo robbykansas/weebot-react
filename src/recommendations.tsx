@@ -36,7 +36,7 @@ const RecommendationUI: React.FC = () => {
     setHasSearched(true);
 
     try {
-      const response = await fetch('http://149.129.218.226:8000/recommendations', {
+      const response = await fetch('https://weebot.dedyn.io/recommendations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
