@@ -25,6 +25,7 @@
   background: -webkit-linear-gradient(45deg, #667eea, #764ba2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: moveInLeft 1s ease-out
 }
 
 .app-tagline {
@@ -33,6 +34,11 @@
   background: -webkit-linear-gradient(45deg, #9f6464, #c53131);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.tagline-animated{
+  animation: moveInBottom .5s ease-out 1s;
+  animation-fill-mode: backwards;
 }
 
 .recommendations-container.centered{
@@ -190,3 +196,31 @@
     transform: rotate(360deg);
   }
 } 
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateX(2rem);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
