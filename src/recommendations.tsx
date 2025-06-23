@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Recommendations.css';
-import { MalLogo, AnilistLogo} from './assets/logo'
+import { MalLogo } from './assets/logo'
 import anilist from './assets/anilist-logo.png'
 
 interface RecommendationResponse {
@@ -69,7 +69,7 @@ const RecommendationUI: React.FC = () => {
       { !hasSearched && (
         <div className="app-container">
           <h1 className="app-title">WeeBot</h1>
-          <p className="app-tagline">Recommend anime based on input with vector DB. Dataset: Anilist 2025</p>
+          <p className="app-tagline tagline-animated">Recommend anime based on input with vector DB. Dataset: Anilist 2025</p>
         </div>
       )}
       <input 
