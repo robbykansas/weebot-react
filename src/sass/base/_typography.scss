@@ -1,0 +1,36 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.7;
+  color: $color-grey-dark;
+}
+
+.heading-primary {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  &--main {
+    display: block;
+    font-size: 10rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $color-primary-1, $color-primary-2);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moveInLeft 1s ease-out
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    background-image: linear-gradient(to right, $color-secondary-1, $color-secondary-2);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moveInBottom .5s ease-out 1s;
+    animation-fill-mode: backwards;
+  }
+}
