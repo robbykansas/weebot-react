@@ -65,52 +65,57 @@ const RecommendationUI: React.FC = () => {
   };
 
   return (
-    <div className={`recommendations-container ${hasSearched ? 'top' : 'centered'}`}>
-      { !hasSearched && (
-        <div className="app-container">
-          <h1 className="app-title">WeeBot</h1>
-          <p className="app-tagline tagline-animated">Recommend anime based on input with vector DB. Dataset: Anilist 2025</p>
+    <div>
+      <section className={`section-search${hasSearched ? '--top' : '--centered'}`}>
+        { !hasSearched && (
+          <h1 className="heading-primary">
+            <span className="heading-primary--main">WeeBot</span>
+            <span className="heading-primary--sub">Recommend anime based on input with vector DB. Dataset: Anilist 2025</span>
+          </h1>
+        )}
+        <div className="section-search__search">
+          <input 
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Search or ask in any language (e.g. 'anime sports from 2020')"
+            className='section-search__search--input'
+            disabled={loading}
+          />
         </div>
-      )}
-      <input 
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
-        placeholder="Search or ask in any language (e.g. 'anime sports from 2020')"
-        className='recommendations-text'
-        disabled={loading}
-      />
-      { loading && (
-        <span className='loader'></span>
-      )}
+        { loading && (
+          <span className='loader'></span>
+        )}
+      </section>
 
+      
       { hasSearched && (
-      <div className='result-container'>
+      <section className='section-cards'>
         {results?.recommendations?.map(item => (
-          <div className='cards-container'>
-            <div className='cards-description-container'>
-              <h2 className='desc-title'>{item.title}</h2>
-              <p className='desc-description' dangerouslySetInnerHTML={{ __html: item.description }}></p>
-              <div className='desc-info'>
-                <span className='info-tag'>{item.format}</span>
-                <span className='info-tag'>Score: {item.averageScore}</span>
-                <span className='info-tag'>Popularity: {item.popularity}</span>
-                <a href={`https://anilist.co/anime/${item.id}`} target="_blank" rel="noopener noreferrer" className='info-anilist'><img src={anilist} alt='anilist'/></a>
-                <a href={`https://myanimelist.net/anime/${item.idMal}`} target="_blank" rel="noopener noreferrer" className='info-mal'><MalLogo /></a>
+          <div className='cards'>
+            <div className='cards__desc'>
+              <h2 className='cards__desc--title'>{item.title}</h2>
+              <p className='cards__desc--desc' dangerouslySetInnerHTML={{ __html: item.description }}></p>
+              <div className='cards__desc--info'>
+                <span className='cards__desc--info--tag'>{item.format}</span>
+                <span className='cards__desc--info--tag'>Score: {item.averageScore}</span>
+                <span className='cards__desc--info--tag'>Popularity: {item.popularity}</span>
+                <a href={`https://anilist.co/anime/${item.id}`} target="_blank" rel="noopener noreferrer" className='cards__desc--info--tag-anilist'><img src={anilist} alt='anilist'/></a>
+                <a href={`https://myanimelist.net/anime/${item.idMal}`} target="_blank" rel="noopener noreferrer" className='cards__desc--info--tag-mal'><MalLogo /></a>
               </div>
-              <div className='desc-genres'>
+              <div className='cards__desc--genres'>
                 {item?.genres?.map(genre => (
-                  <span className='genre-tag'>{genre}</span>
+                  <span className='cards__desc--genres--tag'>{genre}</span>
                 ))}
               </div>
             </div>
-            <div className='cards-image'>
+            <div className='cards__img'>
               <img src={item.cover} alt='cover'/>
             </div>
           </div>
         ))}
-      </div>
+      </section>
       )}
     </div>
   )
