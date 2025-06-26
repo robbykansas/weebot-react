@@ -4,8 +4,8 @@ const MalLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     id="svg1"
-    width="20"
-    height="20"
+    width="28"
+    height="28"
     version="1.1"
     viewBox="0 0 256 256"
   >
